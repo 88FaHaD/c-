@@ -1,41 +1,54 @@
-//lab assignment q1
-#include <iostream>
+
+
+//lab q1
+#include<iostream>
 
 using namespace std;
 
 int main()
 {
-    int N;
-    cout << "Number of values: ";
-    cin >> N;
-
-    int values[N];
-    cout << "Enter " << N << " values (one per line/space seperated): " << endl;
-    for (int i = 0; i < N; i++)
-        cin >> values[i];
-
-    int smallest, largest;
-    double sum = 0, average;
-
-    smallest = largest = values[0];
-
-    for (int i = 0; i < N; i++)
+	int n;
+	cout <<" Enter the value of n ";
+	cin>> n;
+	int i;
+	double array[n];
+	//scaning inside the array
+	cout <<"Enter elements inside the array" ;
+	for(int i=0; i<n ; i++)
+	{
+		cin>> array[i];
+	}
+	//printing the array
+	cout <<"Elements inside the array are ";
+	for(int i=0; i<n ; i++)
+	{
+		cout << array[i] <<" ";
+	}
+	cout<<endl;
+	//largest
+	int largest=array[0];
+	for(int i=0; i<n ; i++)
+	
+	if(array[i] > largest)
+	{
+		largest=array[i];
+	}
+	cout <<"largest number is " <<largest<<endl;
+	//smallest
+	int smallest=array[0];
+    for(i=0; i<n ;i++)
+    if(array[i]<smallest)
     {
-        sum += values[i];
-
-        if (values[i] < smallest)
-            smallest = values[i];
-
-        if (values[i] > largest)
-            largest = values[i];
-    }
-
-    average = sum / N;
-
-    cout << "--------------" << endl;
-    cout << "Smallest: " << smallest << endl;
-    cout << "Largest: " << largest << endl;
-    cout << "Average: " << average << endl;
-
-    return 0;
+    	smallest=array[i];
+	}
+	cout <<"smallest is " <<smallest<<endl;
+	//average
+	double avg;
+	double sum=0;
+	for(int i=0; i<n; i++)
+	{
+		sum=sum+array[i];
+	}
+	avg=sum/n;
+	cout<< "average "<<avg;
 }
