@@ -6,11 +6,3 @@
 //large, it is better to use iteration. However, if time complexity is not an issue and shortness of code is, recursion would be the way to go.
 
 
-#include<iostream>
-using namespace std;
-
-int main()
-{
-	cout<<"Q 5";
-}
-
